@@ -81,3 +81,5 @@
 
 - La gestion des comptes et des contenus archivés ou désactivés est couverte par la **Stratégie de Sécurisation**, qui détaille les procédures d'archivage, de sauvegarde et de restauration des données.
 - Cette stratégie comprend également des politiques de sécurité pour garantir la préservation des informations personnelles et pédagogiques.
+
+[🔝 Retour à la Table des matières](../README.md#table-des-matieres)
