@@ -41,8 +41,9 @@ psql -U [nom_utilisateur] -d [nom_base_de_donnees]
 
 Cela vous permettra d'explorer les tables et les données de la base de données directement.
 
-- **Contribution**
-  Si vous souhaitez contribuer à ce projet :
+#### Contribution
+
+Si vous souhaitez contribuer à ce projet :
 
 1. Fork ce dépôt.
 2. Créez une branche pour votre contribution :
