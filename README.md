@@ -15,7 +15,8 @@ Conception de la base de données d’une plateforme de formation en ligne nomm�
 7. [MPD (Modèle Physique des Données)](./doc/Merise/MPD.md)
 8. [Script SQL](./doc/Merise/SQL.md)
 9. [Instructions d'installation](#instructions-dinstallation)
-10. [Conclusion](#conclusion)
+10. [Contribution](#contribution)
+11. [Conclusion](#conclusion)
 
 ## Instructions d'installation
 
@@ -41,7 +42,7 @@ psql -U [nom_utilisateur] -d [nom_base_de_donnees]
 
 Cela vous permettra d'explorer les tables et les données de la base de données directement.
 
-#### Contribution
+## Contribution
 
 Si vous souhaitez contribuer à ce projet :
 
