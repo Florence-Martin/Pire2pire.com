@@ -69,7 +69,7 @@
 - une leçon peut être modifiée
 - une leçon peut être désactivée d’un ou plusieurs modules
 - une leçon appartient à 0 ou plusieurs modules
-- une leçon peut avoir un statut (en cours, publiée, archivée)
+- une leçon peut avoir un statut (, publiée, archivée)
 - une leçon possède 1 à plusieurs tags (# Merise, #UML, #Conception d’application…)
 - une leçon contient 1 texte
 - une leçon contient 1 vidéo
