@@ -5,7 +5,7 @@
 - **Visiteurs**
   - un visiteur peut voir les formations disponibles
   - un visiteur ne peut pas accéder aux fonctionnalités réservées aux utilisateurs connectés
-  - un visiteur peut s’enregistrer pour devenir apprenant avec un nom, une adresse physique, une date de naissance, un email et un mot de passe
+  - un visiteur peut s’enregistrer pour devenir apprenant avec un nom, un prénom, une adresse physique, une date de naissance, un email et un mot de passe
 - **Apprenant**
   - un apprenant peut exercer son droit à l'effacement conformément au RGPD, demandant la suppression de son compte et des données personnelles associées, mais il ne pourra plus avoir accès aux formations auxquelles il s’est inscrit
   - un apprenant peut s’inscrire à 0 ou plusieurs formations
@@ -17,19 +17,24 @@
   - un apprenant peut désactiver une formation qu’il ne veut plus suivre de son dashboard
 - **Formateur**
   - un formateur s’inscrit sur la plateforme par le biais d’une candidature auprès de l’administrateur
+  - un formateur possède les même attributs d’enregistrement qu’un apprenant, plus un code spécifique (pas de nomenclature particulière demandée par le client)
   - un formateur peut exercer son droit à l'effacement conformément au RGPD, demandant la suppression de son compte et des données personnelles associées
-  - les leçons dont le formateur est l'auteur restent sur la plateforme, conformément à la clause légale de la conservation de données à des fins légitimes, notamment la continuité pédagogique
+  - les leçons dont le formateur est l'auteur restent sur la plateforme, même après son effacement, pour des raisons de continuité pédagogique.
+  - un formateur peut ajouter, modifier, et gérer le statut de ses leçons (de "brouillon" à "publiée" ou à "archivée").
   - un formateur ne peut pas désactiver une leçon
-  - un formateur peut ajouter et modifier sa ou ses leçons
   - un formateur peut visualiser, mais pas modifier ou désactiver les leçons d'autres formateurs
+  - un formateur peut ajouter ou modifier les tags associés à ses propres leçons.
   - un formateur a un dashboard où il visualise ses leçons (brouillon, publiée, archivée)
 - **Administrateur**
-  - un administrateur peut inscrire un candidat en tant que formateur (code, nom, adresse, date de naissance, identifiant et mot de passe)
+  - un administrateur peut inscrire un candidat en tant que formateur (code, nom, prénom, adresse physique, date de naissance, adresse email et mot de passe)
   - un administrateur peut ajouter, modifier et désactiver un compte utilisateur
   - un administrateur peut restaurer un compte ou un contenu archivé si nécessaire
   - un administrateur peut ajouter, modifier et désactiver une formation
+  - un administrateur est responsable de l'approbation des changements de statut d'une formation de "brouillon" à "publiée" ou "archivée"
   - un administrateur peut ajouter, modifier et désactiver un module
+  - un administrateur est responsable de l'approbation des changements de statut d'un module de "brouillon" à "publié" ou "archivé"
   - un administrateur peut ajouter, modifier et désactiver une leçon
+  - un administrateur peut ajouter, modifier ou supprimer un ou plusieurs tags d'une leçon
 - **Super-administrateur**
   - un super-administrateur peut ajouter, modifier et désactiver un compte administrateur
 
@@ -46,8 +51,7 @@
 - une formation peut être ajoutée, modifiée
 - une formation a un statut (brouillon, publiée, archivée)
 - une formation peut être désactivée
-- une formation est validée si seulement tous les modules associés sont validés
-- un module peut être désactivée d’une formation
+- un module peut être désactivé d’une formation
 
 ### Gestion des Modules
 
@@ -55,11 +59,10 @@
 - un module appartient à 1 à plusieurs formations
 - un module possède 1 à plusieurs leçons
 - un module peut être ajouté, modifié
-- un module a un statut (brouillon, publiée, archivée)
+- un module a un statut (brouillon, publié, archivé)
 - une leçon peut être désactivée d’un module
 - un module peut être désactivé
 - un module orphelin (associé à aucune formation) peut être ajouté à une ou plusieurs formations
-- un module est validé si seulement toutes les leçons associées sont validées
 - une leçon peut être désactivée d’un module
 
 ### Gestion des Leçons
@@ -69,17 +72,17 @@
 - une leçon peut être modifiée
 - une leçon peut être désactivée d’un ou plusieurs modules
 - une leçon appartient à 0 ou plusieurs modules
-- une leçon peut avoir un statut (, publiée, archivée)
+- une leçon peut avoir un statut (brouillon, publiée, archivée)
 - une leçon possède 1 à plusieurs tags (# Merise, #UML, #Conception d’application…)
 - une leçon contient 1 texte
 - une leçon contient 1 vidéo
 - une leçon contient 1 à plusieurs image
 - une leçon orpheline (associée à aucun module) peut être ajouté à un ou plusieurs modules
-- une leçon doit contenir au moins un élément de contenu (texte, image ou vidéo) pour être validée
+- une leçon doit contenir au moins un élément de contenu (texte, image ou vidéo) pour être publiée
 
 ### **Gestion de l'Archivage et de la Sécurité**
 
 - La gestion des comptes et des contenus archivés ou désactivés est couverte par la **Stratégie de Sécurisation**, qui détaille les procédures d'archivage, de sauvegarde et de restauration des données.
-- Cette stratégie comprend également des politiques de sécurité pour garantir la préservation des informations personnelles et pédagogiques.
+- Cette stratégie comprend également des politiques de sécurité pour garantir la préservation des informations personnelles (RGPD) et pédagogiques.
 
 [🔝 Retour à la Table des matières](../README.md#table-des-matieres)
