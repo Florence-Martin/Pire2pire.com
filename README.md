@@ -1,14 +1,15 @@
 # Pire2pire.com
 
-Conception de la base de données d’une plateforme de formation en ligne nommée pire2pire.com à l'aide de la méthode MERISE.
+La conception de la base de données pour la plateforme de formation en ligne pire2pire.com est réalisée en utilisant la méthode MERISE.  
+Ce processus est mené en collaboration étroite avec le client pour garantir que chaque étape de la conception soit validée conjointement par nos équipes et notre client.
 
 # Structure du dépôt
 
 ## [Table des matières](#table-des-matieres)
 
 1. [Introduction](./doc/Client/Context.md)
-2. [Acronyme MERISE](./doc/Merise/Merise-acronym.md)
-3. [Dictionnaire de données](./doc/Merise/Dictionary.md)
+2. [Méthode MERISE](./doc/Merise/Merise-method.md)
+3. [Dictionnaire de données](./doc/Dictionary.md)
 4. [Règles de gestion](./doc/Gestion-rules.md)
 5. [MCD (Modèle Conceptuel des Données)](./doc/Merise/MCD.md)
 6. [MLD (Modèle Logique des Données)](./doc/Merise/MLD.md)
