@@ -1,5 +1,10 @@
 # Règles de gestion
 
+### Application
+
+- **Accessibilité**
+  - L'application doit être conforme aux normes d'accessibilité WCAG pour garantir l'accessibilité à tous les utilisateurs.
+
 ### Gestion des utilisateurs
 
 - **Visiteurs**
