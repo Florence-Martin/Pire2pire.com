@@ -6,7 +6,7 @@ Un dictionnaire de données est un outil crucial pour la gestion des données qu
 
 Il sert de référence essentielle pour les développeurs, les administrateurs de bases de données et les analystes, aidant à préserver l'intégrité des données, à faciliter les modifications structurelles et à assurer la conformité réglementaire.
 
-### Dictionnaire de Données Complet
+### Dictionnaire de Données
 
 | Entité     | Attribut         | Type de Données | Longueur | Contraintes                           | Description                                            | Exemple                                      |
 | ---------- | ---------------- | --------------- | -------- | ------------------------------------- | ------------------------------------------------------ | -------------------------------------------- |
