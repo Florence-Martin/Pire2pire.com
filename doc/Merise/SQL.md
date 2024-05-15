@@ -30,7 +30,7 @@ Ce script nécessite l'activation de l'extension "uuid-ossp" pour la génératio
 --        Script PostgreSQL
 ------------------------------------------------------------
 
--- Activer l'extension UUID si elle n'est pas déjà activée
+-- Enable UUID extension if not already enabled
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
 ------------------------------------------------------------
@@ -54,6 +54,8 @@ CREATE TABLE public.Formation(
     CONSTRAINT Formation_PK PRIMARY KEY (ID_Formation)
 );
 
+-- Index for Formation Status
+CREATE INDEX idx_formation_status ON public.Formation(Status_Formation);
 ------------------------------------------------------------
 -- Table: Module
 ------------------------------------------------------------
@@ -120,6 +122,8 @@ CREATE TABLE public.Instructor(
     CONSTRAINT Instructor_User_AK UNIQUE (ID_User)
 );
 
+-- Index for Instructor Code
+CREATE INDEX idx_instructor_code ON public.Instructor(Instructor_Code);
 ------------------------------------------------------------
 -- Table: Lesson
 ------------------------------------------------------------
