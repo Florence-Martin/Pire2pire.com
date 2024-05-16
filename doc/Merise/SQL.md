@@ -3,7 +3,7 @@
 **Auteur :** Florence Martin  
 **Date de création :** 15 mai 2024
 **Description :**  
-Ce script SQL crée une base de données pour une plateforme d'éducation en ligne. Il inclut des tables pour gérer les utilisateurs, les formateurs, les formations, les modules, les leçons, et les inscriptions. Le script utilise l'extension UUID pour assurer des identifiants uniques et définit des relations intégrales entre les tables à travers des clés étrangères.
+Ce script PostgreSQL crée une base de données pour une plateforme d'éducation en ligne. Il inclut des tables pour gérer les utilisateurs, les formateurs, les formations, les modules, les leçons, et les inscriptions. Le script utilise l'extension UUID pour assurer des identifiants uniques et définit des relations intégrales entre les tables à travers des clés étrangères.
 
 ## Tables
 
@@ -23,7 +23,7 @@ Ce script SQL crée une base de données pour une plateforme d'éducation en lig
 
 ## Dépendances
 
-Ce script nécessite l'activation de l'extension "uuid-ossp" pour la génération des UUID.
+Ce script nécessite l'activation de l'extension "uuid-ossp" pour la génération des UUID (identifiants uniques non séquentiels).
 
 ```sql
 -----------------------------------------------------------
