@@ -17,7 +17,7 @@ Ce processus est mené en collaboration étroite avec le client pour garantir qu
 8. [Script SQL](./doc/Merise/SQL.md)
 9. [Instructions d'installation](#instructions-dinstallation)
 10. [Contribution](#contribution)
-11. [Conclusion](#conclusion)
+11. [Conclusion](./doc/Conclusion.md)
 
 ## Instructions d'installation
 
@@ -56,7 +56,3 @@ git checkout -b feature/ma-contribution
 
 3. Apportez vos modifications aux documents Markdown ou au script SQL.
 4. Soumettez une Pull Request pour intégrer vos changements dans le dépôt principal.
-
-## Conclusion
-
-Terminer par une conclusion récapitulative, soulignant la cohérence de l'ensemble et les prochaines étapes potentielles.

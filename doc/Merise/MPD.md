@@ -298,4 +298,5 @@ Ces mesures renforcent la sécurité de notre base de données et assurent la pr
 
 Ce MPD est conçu pour fournir une base solide pour notre système de gestion d’apprentissage, garantissant performance, sécurité et intégrité des données, même sous une charge élevée.
 En suivant les directives détaillées dans ce document, les développeurs et administrateurs de base de données pourront efficacement mettre en œuvre, maintenir, et utiliser la base de données.
+
 [🔝 Retour à la Table des matières](../../README.md#table-des-matieres)
