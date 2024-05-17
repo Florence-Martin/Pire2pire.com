@@ -1,21 +1,21 @@
 # Introduction du brief - Contexte du projet
 
-Les formations sont organisés en modules.
+Le texte présenté ci-après constitue une introduction préliminaire aux attentes de notre client. Ces attentes sont susceptibles d’évoluer au fil des discussions entre le client et nos équipes. Les formations proposées sont structurées en modules.
 
-Chaque module est caractérisé par un numéro de module sous forme de Semantic Versionning, un intitulé, un objectif pédagogique, un contenu (textes, images et vidéos), une durée en heures (facultatif), un ou plusieurs tags et un auteur.
+Chaque module est identifié par un numéro de version sémantique et inclut un titre, un objectif pédagogique, un contenu composé de textes, d’images et de vidéos, une durée optionnelle, un ou plusieurs mots-clés et un auteur.
 
-Un module peut faire partie d'une ou plusieurs formations, comme par exemple un pire module "Commandes de base Git" pourrait faire partie d'une pire formation "Frontend Javascript" et "DevOps", voir plus.
+Un module peut être intégré à plusieurs formations. Par exemple, le module “Commandes de base Git” pourrait être inclus dans les formations “Frontend Javascript” et “DevOps”, voire d’autres.
 
-Une leçon peut contenir un texte et/ou une image et/ou une vidéo.
+Une leçon au sein d’un module peut comprendre du texte, une image, et/ou une vidéo.
 
-Les apprenants peuvent s'inscrire à une ou plusieurs formations, ils peuvent choisir de ne pas suivre certains des modules s'ils possèdent déjà, par exemple, les compétences. Autrement dit, ils peuvent arbitrairement valider les modules de leur choix en un clic.
+Les apprenants ont la possibilité de s’inscrire à plusieurs formations et peuvent choisir de ne pas participer à certaines leçons si elles couvrent des compétences qu’ils maîtrisent déjà. En d’autres termes, ils peuvent marquer les leçons comme complétées d’un simple clic.
 
-Chaque apprenant est évalué pour chaque module et possède un état de fin de module (OK / KO).
+Chaque apprenant est évalué sur chaque module et se voit attribuer un statut de réussite ou d’échec à la fin de celui-ci.
 
-Une formation est considérée comme terminée lorsque tous les modules ont été validés.
+Une formation est considérée comme achevée lorsque l’apprenant a validé tous ses modules.
 
-Chaque apprenant est caractérisé par un numéro d’inscription unique, un nom, un prénom, une adresse et une date de naissance.
+Les apprenants sont également identifiés par un numéro d’inscription unique, un nom, un prénom, une adresse et une date de naissance.
 
-Un formateurs est auteur d'un module pour une formation donnée, chaque formateur est caractérisé par un code, un nom, un prénom.
+Un formateur, qui est également l’auteur d’un module, est identifié par un code personnel, un nom et un prénom.
 
 [🔝 Retour à la Table des matières](../../README.md#table-des-matieres)
