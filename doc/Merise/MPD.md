@@ -234,7 +234,20 @@ CREATE INDEX idx_instructor_code ON public.Instructor(Instructor_Code);
 CREATE INDEX idx_formation_status ON public.Formation(Status_Formation);
 ```
 
-## 5. Sécurité
+## 5. Gestion Automatisée des Validations
+
+### 5.1 Objectif
+
+Implémenter des procédures stockées pour gérer automatiquement la validation des leçons et assurer la propagation de la validation aux niveaux supérieurs, soit les modules puis les formations. Cette automatisation garantit que :
+
+- La validation de toutes les leçons d’un module entraîne la validation du module.
+- La validation de tous les modules d’une formation entraîne la validation de la formation.
+
+### 5.2 Procédure de Validation de Leçon
+
+Cette procédure est déclenchée lorsqu’une leçon est validée par un apprenant. Elle vérifie si toutes les leçons associées à un module donné sont validées et, le cas échéant, marque le module comme validé. Ensuite, elle vérifie si tous les modules associés à une formation sont validés et, si c’est le cas, marque la formation comme validée.
+
+## 6. Sécurité
 
 La sécurité des données est une priorité absolue dans notre système. Voici les mesures clés que nous avons prises :
 
@@ -250,7 +263,7 @@ La sécurité des données est une priorité absolue dans notre système. Voici 
 
 Ces mesures renforcent la sécurité de notre base de données et assurent la protection de l'information contre les accès et modifications non autorisés.
 
-## 6. Conclusion
+## 7. Conclusion
 
 Ce MPD est conçu pour fournir une base solide pour notre système de gestion d’apprentissage, garantissant performance, sécurité et intégrité des données, même sous une charge élevée.
 En suivant les directives détaillées dans ce document, les développeurs et administrateurs de base de données pourront efficacement mettre en œuvre, maintenir, et utiliser la base de données.
