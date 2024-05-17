@@ -17,7 +17,7 @@ Une clé primaire est assignée à chaque table, soit issue des attributs exista
 
 #### Avantages des UUID
 
-- **Unicité Garantie** : Ils réduisent presque à zéro la possibilité de collisions.
+- **Unicité Garantie** : Réduisent presque à zéro la possibilité de collisions.
 - **Sécurité Améliorée** : Offrent une meilleure protection contre la prédiction des identifiants.
 - **Facilité de Fusion et Synchronisation** : Facilitent les opérations entre différents systèmes.
 - **Indépendance et Évolutivité** : Permettent une référence unique sans dépendance contextuelle et favorisent l'évolutivité sans nécessiter de gestion centralisée pour l'unicité.
@@ -31,7 +31,7 @@ Les relations entre les entités sont converties en liens appropriés entre les 
 
 ## Normalisation - Respect de la 3ème Forme Normale (3NF)
 
-Les tables sont structurées pour éliminer la redondance et prévenir les anomalies de mise à jour, alignant chaque table avec les formes normales appropriées pour assurer l'intégrité et la simplicité de la base de données.
+Les tables sont structurées pour éliminer la redondance et prévenir les anomalies de mise à jour, respectant les trois premières formes normales (1NF, 2NF et 3NF). Cela garantit l’intégrité, la cohérence et la simplicité de notre base de données, et semble suffisant pour notre application.
 
 ## Intégration des Contraintes d'Intégrité
 
