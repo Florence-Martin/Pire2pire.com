@@ -13,8 +13,9 @@ Collecter et analyser les exigences des utilisateurs pour déterminer les donné
 
 ### **2. Identification des Entités**
 
-Définir les entités principales du domaine d’application et leurs attributs respectifs. 3. Détermination des Associations
-Identifier les relations entre les entités et spécifier leurs cardinalités (ex. un-à-un, un-à-plusieurs, plusieurs-à-plusieurs).
+- Définir les entités principales du domaine d’application et leurs attributs respectifs.
+- Déterminer les associations, ou relations entre les entités.
+- Spécifier leurs cardinalités (ex. un-à-un, un-à-plusieurs, plusieurs-à-plusieurs), permettant de préciser combien d'instances d'une entité peuvent être associées à combien d'instances d'une autre entité.
 
 ### **3. Règles de Gestion**
 
