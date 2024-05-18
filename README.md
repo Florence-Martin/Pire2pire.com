@@ -8,7 +8,7 @@ Ce processus est mené en collaboration étroite avec le client pour garantir qu
 ## [Table des matières](#table-des-matieres)
 
 1. [Introduction](./doc/Client/Context.md)
-2. [Méthode MERISE](./doc/Merise/Merise-method.md)
+2. [Méthode MERISE](./doc/Merise/Merise-acronym.md)
 3. [Dictionnaire de données](./doc/Dictionary.md)
 4. [Règles de gestion](./doc/Gestion-rules.md)
 5. [MCD (Modèle Conceptuel des Données)](./doc/Merise/MCD.md)
