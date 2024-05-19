@@ -3,7 +3,7 @@
 Le Modèle Conceptuel de Données (MCD) est une étape fondamentale dans la conception d'une base de données, permettant de définir de manière abstraite et indépendante de toute technologie les données à manipuler ainsi que leurs relations.  
 Ce modèle aide à minimiser les erreurs dans la conception des bases de données et à aligner étroitement le système d'information avec les besoins métier.
 
-![Représentation MCD](../Assets/Images/MCD-7mai2024.png)
+![Représentation MCD](../Assets/Images/MCD.png)
 
 Ces étapes résument le processus de création d'un MCD :
 

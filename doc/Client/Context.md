@@ -1,6 +1,9 @@
 # Introduction du brief - Contexte du projet
 
-Le texte présenté ci-après constitue une introduction préliminaire aux attentes de notre client. Ces attentes sont susceptibles d’évoluer au fil des discussions entre le client et nos équipes. Les formations proposées sont structurées en modules.
+Le texte présenté ci-après constitue une brève présentations des attentes de notre client. Ces besoins sont susceptibles d’évoluer au fil des discussions entre le client et nos équipes.  
+La plateforme est destinée à un public francophone dans une première version, mais très vite elle sera destinée à un public international.
+
+Les formations proposées sont structurées en modules, qui eux-même sont composés de lecons.
 
 Chaque module est identifié par un numéro de version sémantique et inclut un titre, un objectif pédagogique, un contenu composé de textes, d’images et de vidéos, une durée optionnelle, un ou plusieurs mots-clés et un auteur.
 
