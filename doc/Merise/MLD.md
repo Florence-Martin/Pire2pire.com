@@ -5,22 +5,29 @@ Ce processus nécessite une compréhension approfondie à la fois des besoins m�
 
 ![Représentation MLD](../Assets/Images/MLD.png)
 
-# Identification des Entités
+## Identification des Entités
 
 Chaque entité identifiée dans le Modèle Conceptuel de Données (MCD) est transformée en table dans le MLD, avec les attributs de chaque entité devenant les colonnes de ces tables. Par exemple, les entités `User`, `Address`, `Role`, etc., sont toutes représentées avec des attributs spécifiques et des types de données adaptés à leurs fonctions.
 
-## Définition des Clés Primaires (PK)
-
-### Clés Primaires Uniques
+## Clés Primaires Uniques (PK)
 
 Une clé primaire est assignée à chaque table, soit issue des attributs existants de l'entité, soit ajoutée spécifiquement pour servir d'identifiant unique. Par exemple, `UUID` pour les utilisateurs et les instructeurs pour assurer une unicité à l'échelle mondiale.
 
-#### Avantages des UUID
+### Avantages des UUID
 
 - **Unicité Garantie** : Réduisent presque à zéro la possibilité de collisions.
 - **Sécurité Améliorée** : Offrent une meilleure protection contre la prédiction des identifiants.
 - **Facilité de Fusion et Synchronisation** : Facilitent les opérations entre différents systèmes.
 - **Indépendance et Évolutivité** : Permettent une référence unique sans dépendance contextuelle et favorisent l'évolutivité sans nécessiter de gestion centralisée pour l'unicité.
+
+## Clés Étrangères (FK)
+
+Les clés étrangères sont essentielles pour maintenir les relations d’intégrité référentielle entre les différentes tables de notre base de données. Elles permettent de lier les tables entre elles, assurant que les données sont cohérentes et correctes à travers les différentes entités.
+
+### Avantages
+
+- **Maintenir l’intégrité référentielle** : Assure que des liens ne peuvent exister que si les données correspondantes existent.
+- **Clarifier la structure relationnelle** : Rend les relations entre les entités explicites et facilement compréhensibles, facilitant ainsi les requêtes et la maintenance de la base de données.
 
 ## Transformation des Associations
 
