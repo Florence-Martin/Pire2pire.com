@@ -1,6 +1,6 @@
 # Pire2pire.com
 
-La conception de la base de données pour la plateforme de formation en ligne pire2pire.com est réalisée en utilisant la méthode MERISE.  
+La conception de la base de données pour la plateforme de formation en ligne **pire2pire.com** est réalisée en utilisant la méthode MERISE.  
 Ce processus est mené en collaboration étroite avec le client pour garantir que chaque étape de la conception soit validée conjointement par nos équipes et notre client.
 
 # Structure du dépôt
@@ -13,11 +13,10 @@ Ce processus est mené en collaboration étroite avec le client pour garantir qu
 4. [Règles de gestion](./doc/Gestion-rules.md)
 5. [MCD (Modèle Conceptuel des Données)](./doc/Merise/MCD.md)
 6. [MLD (Modèle Logique des Données)](./doc/Merise/MLD.md)
-7. [MPD (Modèle Physique des Données)](./doc/Merise/MPD.md)
-8. [Script SQL](./doc/Merise/SQL.md)
-9. [Instructions d'installation](#instructions-dinstallation)
-10. [Contribution](#contribution)
-11. [Conclusion](./doc/Conclusion.md)
+7. [Script SQL](./doc/Merise/SQL.md)
+8. [Instructions d'installation](#instructions-dinstallation)
+9. [Contribution](#contribution)
+10. [Conclusion](./doc/Conclusion.md)
 
 ## Instructions d'installation
 

@@ -3,7 +3,7 @@
 En passant du MCD au MLD, l'objectif est de traduire une représentation conceptuelle des données en une structure logique prête pour l'implémentation, tout en assurant l'intégrité, la performance, et la maintenabilité de la base de données.  
 Ce processus nécessite une compréhension approfondie à la fois des besoins métier et des capacités du système de gestion de base de données qui sera utilisé (PostgreSQL dans notre cas).
 
-![Représentation MLD](../Assets/Images/MLD-7mai2024.png)
+![Représentation MLD](../Assets/Images/MLD.png)
 
 # Identification des Entités
 
@@ -27,7 +27,7 @@ Une clé primaire est assignée à chaque table, soit issue des attributs exista
 Les relations entre les entités sont converties en liens appropriés entre les tables :
 
 - **Relations Un-à-Plusieurs** : Utilisent des clés étrangères, comme dans les cas de `User` à `Address` ou `Lesson` à `Module`.
-- **Relations Plusieurs-à-Plusieurs** : Sont gérées via des tables d'association telles que `Give` et `Compose`, facilitant la gestion des relations complexes.
+- **Relations Plusieurs-à-Plusieurs** : Sont gérées via des tables d'association telles que `Module_Formation` et `Publication_Status_Attribution`, facilitant la gestion des relations complexes.
 
 ## Normalisation - Respect de la 3ème Forme Normale (3NF)
 
@@ -35,7 +35,7 @@ Les tables sont structurées pour éliminer la redondance et prévenir les anoma
 
 ## Intégration des Contraintes d'Intégrité
 
-Les contraintes d'intégrité comme l'unicité, les clés étrangères, et les validations sont mises en place pour garantir la validité et la sécurité des opérations sur les données.
+Les contraintes d'intégrité fonctionnelles et physiques comme l'unicité, les clés étrangères, et les validations sont mises en place pour garantir la validité et la sécurité des opérations sur les données.
 
 ## Optimisation des Performances par Indexation
 
