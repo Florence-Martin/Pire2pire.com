@@ -34,7 +34,7 @@ Les clés étrangères sont essentielles pour maintenir les relations d’intég
 Les relations entre les entités sont converties en liens appropriés entre les tables :
 
 - **Relations Un-à-Plusieurs** : Utilisent des clés étrangères, comme dans les cas de `User` à `Address` ou `Lesson` à `Module`.
-- **Relations Plusieurs-à-Plusieurs** : Sont gérées via des tables d'association telles que `Module_Formation` et `Publication_Status_Attribution`, facilitant la gestion des relations complexes.
+- **Relations Plusieurs-à-Plusieurs** : Sont gérées via des tables d'association telles que `Module_Formation` et `Lesson_Module`, facilitant la gestion des relations complexes.
 
 ## Normalisation - Respect de la 3ème Forme Normale (3NF)
 

@@ -16,6 +16,12 @@ Ce script nécessite l'activation de l'extension "uuid-ossp" pour la génératio
 --        Script Postgre
 ------------------------------------------------------------
 ------------------------------------------------------------
+-- Extension "uuid-ossp"
+------------------------------------------------------------
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+
+
+------------------------------------------------------------
 -- Table: Role
 ------------------------------------------------------------
 CREATE TABLE public.Role(
