@@ -7,7 +7,7 @@ Les formations proposées sont structurées en modules, qui eux-même sont compo
 
 Chaque module est identifié par un numéro de version sémantique et inclut un titre, un objectif pédagogique, un contenu composé de textes, d’images et de vidéos, une durée optionnelle, un ou plusieurs mots-clés et un auteur.
 
-Un module peut être intégré à plusieurs formations. Par exemple, le module “Commandes de base Git” pourrait être inclus dans les formations “Frontend Javascript” et “DevOps”, voire d’autres.
+Un module peut être intégré à plusieurs formations. Par exemple, le module “Commandes de base Git” pourrait être inclus dans les formations “Frontend Javascript” et “DevOps”, voir d’autres.
 
 Une leçon au sein d’un module peut comprendre du texte, une image, et/ou une vidéo.
 
