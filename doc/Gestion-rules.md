@@ -9,7 +9,7 @@
 
 - **Visiteurs**
   - un visiteur peut voir les formations disponibles
-  - un visiteur ne peut pas accéder aux fonctionnalités réservées aux utilisateurs connectés
+  - un visiteur ne peut pas accéder aux fonctionnalités réservées aux utilisateurs connectés (inscription à une formation, la visualisation du contenu des leçons ou des modules, etc.)
   - un visiteur peut s’enregistrer pour devenir apprenant avec un nom, un prénom, une adresse physique, une date de naissance, un email et un mot de passe
 - **Apprenant**
   - un apprenant peut exercer son droit à l'effacement conformément au RGPD, demandant la suppression de son compte et des données personnelles associées, mais il ne pourra plus avoir accès aux formations auxquelles il s’est inscrit
@@ -69,6 +69,7 @@
 - une formation peut être désactivée
 - une formation peut être validée ou non validée
 - une formation est activée dès l'inscription
+- une formation a une date de début et de fin
 - un module peut être désactivé d’une formation
 
 ### Gestion des Modules
