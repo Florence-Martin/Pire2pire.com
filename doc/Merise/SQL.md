@@ -96,6 +96,7 @@ CREATE TABLE public.Formation(
 	Description                    TEXT NOT NULL,
 	Publication_Status_Formation   VARCHAR(50) NOT NULL CHECK (Publication_Status__Formation IN ('Brouillon', 'Publié', 'Archivé')),
 	IsValidated                    BOOL NOT NULL DEFAULT FALSE,
+	Is_Public 					   BOOL NOT NULL DEFAULT TRUE;
 	ID_Instructor                  UUID  NOT NULL ,
 	CONSTRAINT Formation_PK PRIMARY KEY (ID_Formation)
 
