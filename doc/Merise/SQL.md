@@ -24,229 +24,217 @@ CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 ------------------------------------------------------------
 -- Table: Role
 ------------------------------------------------------------
-CREATE TABLE public.Role(
-	ID_Role     SERIAL NOT NULL UNIQUE ,
-	Name_Role   VARCHAR (50) NOT NULL UNIQUE ,
-	CONSTRAINT Role_PK PRIMARY KEY (ID_Role)
+CREATE TABLE public.Roles(
+	roleId     SERIAL NOT NULL UNIQUE ,
+	nameRole   VARCHAR (50) NOT NULL UNIQUE ,
+	CONSTRAINT Roles_PK PRIMARY KEY (roleId)
 );
 
 
 ------------------------------------------------------------
 -- Table: Publication_Status
 ------------------------------------------------------------
-CREATE TABLE public.Publication_Status(
-	ID_Publication_Status     SERIAL NOT NULL UNIQUE ,
-	Type_Publication_Status   VARCHAR (50) NOT NULL UNIQUE ,
-	CONSTRAINT Publication_Status_PK PRIMARY KEY (ID_Publication_Status)
+CREATE TABLE public.PublicationStatus(
+	publicationStatusId     SERIAL NOT NULL UNIQUE ,
+	typePublicationStatus   VARCHAR (50) NOT NULL UNIQUE ,
+	CONSTRAINT PublicationStatus_PK PRIMARY KEY (publicationStatusId)
 );
 
-
 ------------------------------------------------------------
--- Table: Address
+-- Table: Addresses
 ------------------------------------------------------------
-CREATE TABLE public.Address(
-	ID_Address         SERIAL NOT NULL UNIQUE ,
-	Address_Number     VARCHAR (50) NOT NULL ,
-	Address_Street     VARCHAR (100) NOT NULL ,
-	Address_Postcode   VARCHAR (20) NOT NULL ,
-	Address_City       VARCHAR (50) NOT NULL ,
-	Address_Country    VARCHAR (50) NOT NULL  ,
-	CONSTRAINT Address_PK PRIMARY KEY (ID_Address)
+CREATE TABLE public.Addresses(
+	addressId         SERIAL NOT NULL UNIQUE ,
+	addressNumber     VARCHAR (50) NOT NULL ,
+	addressStreet     VARCHAR (100) NOT NULL ,
+	addressPostcode   VARCHAR (20) NOT NULL ,
+	addressCity       VARCHAR (50) NOT NULL ,
+	addressCountry    VARCHAR (50) NOT NULL ,
+	CONSTRAINT Addresses_PK PRIMARY KEY (addressId)
 );
-
 
 ------------------------------------------------------------
 -- Table: User
 ------------------------------------------------------------
-CREATE TABLE public.User(
-	ID_User      UUID NOT NULL UNIQUE DEFAULT uuid_generate_v4(),
-	Firstname    VARCHAR (50) NOT NULL ,
-	Lastname     VARCHAR (50) NOT NULL ,
-	Birthdate    DATE  NOT NULL ,
-	Email        VARCHAR (50) NOT NULL UNIQUE ,
-	Password     VARCHAR (50) NOT NULL ,
-	User_Type    VARCHAR (50) NOT NULL ,
-	ID_Address   INT  NOT NULL  ,
-	CONSTRAINT User_PK PRIMARY KEY (ID_User)
+CREATE TABLE public.Users(
+	userUuid    VARCHAR (36) NOT NULL UNIQUE DEFAULT uuid_generate_v4(),
+	firstname   VARCHAR (50) NOT NULL ,
+	lastname    VARCHAR (50) NOT NULL ,
+	birthdate   DATE NOT NULL ,
+	email       VARCHAR (50) NOT NULL UNIQUE ,
+	password    VARCHAR (50) NOT NULL ,
+	userType    VARCHAR (50) NOT NULL ,
+	addressId   INT  NOT NULL  ,
+	CONSTRAINT Users_PK PRIMARY KEY (userUuid)
 
-	,CONSTRAINT User_Address_FK FOREIGN KEY (ID_Address) REFERENCES public.Address(ID_Address)
+	,CONSTRAINT Users_Addresses_FK FOREIGN KEY (addressId) REFERENCES public.Addresses(addressId)
 );
 
-CREATE INDEX idx_user_email ON public.User(Email);
+CREATE INDEX idx_userEmail ON public.Users(email);
 ------------------------------------------------------------
 -- Table: Instructor
 ------------------------------------------------------------
-CREATE TABLE public.Instructor(
-	ID_Instructor     UUID NOT NULL UNIQUE DEFAULT uuid_generate_v4(),
-	Instructor_Code   VARCHAR (50) NOT NULL UNIQUE ,
-	ID_User           UUID  NOT NULL UNIQUE ,
-	CONSTRAINT Instructor_PK PRIMARY KEY (ID_Instructor)
+CREATE TABLE public.Instructors(
+	instructorUuid   VARCHAR (36) NOT NULL UNIQUE DEFAULT uuid_generate_v4(),
+	instructorCode   VARCHAR (50) NOT NULL UNIQUE ,
+	userUuid         VARCHAR (36) NOT NULL UNIQUE ,
+	CONSTRAINT Instructors_PK PRIMARY KEY (instructorUuid)
 
-	,CONSTRAINT Instructor_User_FK FOREIGN KEY (ID_User) REFERENCES public.User(ID_User)
-	,CONSTRAINT Instructor_User_AK UNIQUE (ID_User)
+	,CONSTRAINT Instructors_Users_FK FOREIGN KEY (userUuid) REFERENCES public.Users(userUuid)
+	,CONSTRAINT Instructors_Users_AK UNIQUE (userUuid)
 );
 
-CREATE INDEX idx_instructor_code ON public.Instructor(Instructor_Code);
+CREATE INDEX idx_instructorCode ON public.Instructors(instructorCode);
 ------------------------------------------------------------
 -- Table: Formation
 ------------------------------------------------------------
-CREATE TABLE public.Formation(
-	ID_Formation                   SERIAL NOT NULL UNIQUE ,
-	Title_Formation                VARCHAR (50) NOT NULL ,
-	Description                    TEXT NOT NULL,
-	Publication_Status_Formation   VARCHAR(50) NOT NULL CHECK (Publication_Status__Formation IN ('Brouillon', 'Publié', 'Archivé')),
-	IsValidated                    BOOL NOT NULL DEFAULT FALSE,
-	Is_Public 					   BOOL NOT NULL DEFAULT TRUE;
-	ID_Instructor                  UUID  NOT NULL ,
-	CONSTRAINT Formation_PK PRIMARY KEY (ID_Formation)
+CREATE TABLE public.Formations(
+	formationId                  SERIAL NOT NULL UNIQUE ,
+	titleFormation               VARCHAR (50) NOT NULL ,
+	description                  TEXT NOT NULL ,
+	publicationStatusFormation   VARCHAR (50) NOT NULL CHECK (Publication_Status__Formation IN ('Brouillon', 'Publié', 'Archivé')),
+	isValidated                  BOOL NOT NULL DEFAULT FALSE,
+	isPublic                     BOOL NOT NULL DEFAULT TRUE;
+	instructorUuid               VARCHAR (36) NOT NULL ,
+	CONSTRAINT Formations_PK PRIMARY KEY (formationId)
 
-	,CONSTRAINT Formation_Instructor_FK FOREIGN KEY (ID_Instructor) REFERENCES public.Instructor(ID_Instructor)
+	,CONSTRAINT Formations_Instructors_FK FOREIGN KEY (instructorUuid) REFERENCES public.Instructors(instructorUuid)
 );
 
-CREATE INDEX idx_formation_status ON public.Formation(Publication_Status_Formation);
+CREATE INDEX idx_formationStatus ON public.Formations(publicationStatusFormation);
 ------------------------------------------------------------
 -- Table: Module
 ------------------------------------------------------------
-CREATE TABLE public.Module(
-	ID_Module                   SERIAL NOT NULL UNIQUE ,
-	Title_Module                VARCHAR (50) NOT NULL ,
-	Content_Module              TEXT NOT NULL ,
-	Version                     VARCHAR (50) NOT NULL ,
-	Objectif                    TEXT NOT NULL ,
-	Publication_Status_Module   VARCHAR(50) NOT NULL CHECK (Publication_Status_Module IN ('Brouillon', 'Publié', 'Archivé')),
-	IsValidated                 BOOL NOT NULL DEFAULT FALSE,
-	ID_Instructor               UUID  NOT NULL ,
-	CONSTRAINT Module_PK PRIMARY KEY (ID_Module)
+CREATE TABLE public.Modules(
+	moduleId                  SERIAL NOT NULL UNIQUE ,
+	titleModule               VARCHAR (50) NOT NULL ,
+	contentModule             TEXT NOT NULL ,
+	version                   VARCHAR (50) NOT NULL ,
+	objectif                  TEXT NOT NULL ,
+	publicationStatusModule   VARCHAR (50) NOT NULL CHECK (Publication_Status_Module IN ('Brouillon', 'Publié', 'Archivé')),
+	isValidated               BOOL NOT NULL DEFAULT FALSE,
+	instructorUuid            VARCHAR (36) NOT NULL  ,
+	CONSTRAINT Modules_PK PRIMARY KEY (moduleId)
 
-	,CONSTRAINT Module_Instructor_FK FOREIGN KEY (ID_Instructor) REFERENCES public.Instructor(ID_Instructor)
+	,CONSTRAINT Modules_Instructors_FK FOREIGN KEY (instructorUuid) REFERENCES public.Instructors(instructorUuid)
 );
-
 
 ------------------------------------------------------------
 -- Table: Lesson
 ------------------------------------------------------------
-CREATE TABLE public.Lesson(
-	ID_Lesson                   SERIAL NOT NULL UNIQUE ,
-	Title_Lesson                VARCHAR (50) NOT NULL ,
-	Content_Lesson              TEXT NOT NULL ,
-	Video_URL                   TEXT NOT NULL ,
-	Image_URL                   TEXT NOT NULL ,
-	Publication_Status_Lesson   VARCHAR(50) NOT NULL CHECK (Publication_Status_Lesson IN ('Brouillon', 'Publié', 'Archivé')),
-	ID_Instructor               UUID NOT NULL ,
-	CONSTRAINT Lesson_PK PRIMARY KEY (ID_Lesson)
+CREATE TABLE public.Lessons(
+	lessonId                  SERIAL NOT NULL UNIQUE ,
+	titleLesson               VARCHAR (50) NOT NULL ,
+	contentLesson             TEXT NOT NULL ,
+	videoUrl                  TEXT NOT NULL ,
+	imageUrl                  TEXT NOT NULL ,
+	publicationStatusLesson   VARCHAR (50) NOT NULL CHECK (Publication_Status_Lesson IN ('Brouillon', 'Publié', 'Archivé')),
+	instructorUuid            VARCHAR (36) NOT NULL  ,
+	CONSTRAINT Lessons_PK PRIMARY KEY (lessonId)
 
-	,CONSTRAINT Lesson_Instructor_FK FOREIGN KEY (ID_Instructor) REFERENCES public.Instructor(ID_Instructor)
+	,CONSTRAINT Lessons_Instructors_FK FOREIGN KEY (instructorUuid) REFERENCES public.Instructors(instructorUuid)
 );
-
-
 ------------------------------------------------------------
 -- Table: Tag
 ------------------------------------------------------------
-CREATE TABLE public.Tag(
-	ID_Title_Tag   SERIAL NOT NULL UNIQUE ,
-	CONSTRAINT Tag_PK PRIMARY KEY (ID_Title_Tag)
+CREATE TABLE public.Tags(
+	titleTagId   SERIAL NOT NULL UNIQUE ,
+	CONSTRAINT Tags_PK PRIMARY KEY (titleTagId)
 );
-
 
 ------------------------------------------------------------
 -- Table: User_Formation_Registration
 ------------------------------------------------------------
-CREATE TABLE public.User_Formation_Registration(
-	ID_Formation       INT  NOT NULL ,
-	ID_User            UUID NOT NULL ,
-	Inscription_Date   DATE ,
-	Is_Active          BOOL NOT NULL DEFAULT TRUE,
-	End_Date           DATE ,
-	CONSTRAINT User_Formation_Registration_PK PRIMARY KEY (ID_Formation,ID_User)
+CREATE TABLE public.UserFormationRegistration(
+	formationId         INT  NOT NULL ,
+	userUuid            VARCHAR (36) NOT NULL ,
+	inscriptionDate     DATE ,
+	isActive            BOOL NOT NULL DEFAULT TRUE,
+	endDate             DATE  NOT NULL  ,
+	CONSTRAINT UserFormationRegistration_PK PRIMARY KEY (formationId,userUuid)
 
-	,CONSTRAINT User_Formation_Registration_Formation_FK FOREIGN KEY (ID_Formation) REFERENCES public.Formation(ID_Formation)
-	,CONSTRAINT User_Formation_Registration_User0_FK FOREIGN KEY (ID_User) REFERENCES public.User(ID_User)
-);
-
+	,CONSTRAINT UserFormationRegistration_Formations_FK FOREIGN KEY (formationId) REFERENCES public.Formations(formationId)
+	,CONSTRAINT UserFormationRegistration_Users0_FK FOREIGN KEY (userUuid) REFERENCES public.Users(userUuid)
+)
 
 ------------------------------------------------------------
 -- Table: Module_Formation
 ------------------------------------------------------------
-CREATE TABLE public.Module_Formation(
-	ID_Module      INT  NOT NULL ,
-	ID_Formation   INT  NOT NULL ,
-	CONSTRAINT Module_Formation_PK PRIMARY KEY (ID_Module,ID_Formation)
+CREATE TABLE public.ModuleFormation(
+	moduleId      INT  NOT NULL ,
+	formationId   INT  NOT NULL  ,
+	CONSTRAINT ModuleFormation_PK PRIMARY KEY (moduleId,formationId)
 
-	,CONSTRAINT Module_Formation_Module_FK FOREIGN KEY (ID_Module) REFERENCES public.Module(ID_Module)
-	,CONSTRAINT Module_Formation_Formation0_FK FOREIGN KEY (ID_Formation) REFERENCES public.Formation(ID_Formation)
+	,CONSTRAINT ModuleFormation_Modules_FK FOREIGN KEY (moduleId) REFERENCES public.Modules(moduleId)
+	,CONSTRAINT ModuleFormation_Formations0_FK FOREIGN KEY (formationId) REFERENCES public.Formations(formationId)
 );
-
 
 ------------------------------------------------------------
 -- Table: Lesson_Module
 ------------------------------------------------------------
-CREATE TABLE public.Lesson_Module(
-	ID_Module   INT  NOT NULL ,
-	ID_Lesson   INT  NOT NULL ,
-	CONSTRAINT Lesson_Module_PK PRIMARY KEY (ID_Module,ID_Lesson)
+CREATE TABLE public.LessonModule(
+	moduleId   INT  NOT NULL ,
+	lessonId   INT  NOT NULL  ,
+	CONSTRAINT LessonModule_PK PRIMARY KEY (moduleId,lessonId)
 
-	,CONSTRAINT Lesson_Module_Module_FK FOREIGN KEY (ID_Module) REFERENCES public.Module(ID_Module)
-	,CONSTRAINT Lesson_Module_Lesson0_FK FOREIGN KEY (ID_Lesson) REFERENCES public.Lesson(ID_Lesson)
+	,CONSTRAINT LessonModule_Modules_FK FOREIGN KEY (moduleId) REFERENCES public.Modules(moduleId)
+	,CONSTRAINT LessonModule_Lessons0_FK FOREIGN KEY (lessonId) REFERENCES public.Lessons(lessonId)
 );
 
 
 ------------------------------------------------------------
 -- Table: User_Role
 ------------------------------------------------------------
-CREATE TABLE public.User_Role(
-	ID_Role   INT  NOT NULL ,
-	ID_User   UUID NOT NULL ,
-	CONSTRAINT User_Role_PK PRIMARY KEY (ID_Role,ID_User)
+CREATE TABLE public.UserRole(
+	roleId     INT  NOT NULL ,
+	userUuid   VARCHAR (36) NOT NULL  ,
+	CONSTRAINT UserRole_PK PRIMARY KEY (roleId,userUuid)
 
-	,CONSTRAINT User_Role_Role_FK FOREIGN KEY (ID_Role) REFERENCES public.Role(ID_Role)
-	,CONSTRAINT User_Role_User0_FK FOREIGN KEY (ID_User) REFERENCES public.User(ID_User)
+	,CONSTRAINT UserRole_Roles_FK FOREIGN KEY (roleId) REFERENCES public.Roles(roleId)
+	,CONSTRAINT UserRole_Users0_FK FOREIGN KEY (userUuid) REFERENCES public.Users(userUuid)
 );
-
 
 ------------------------------------------------------------
 -- Table: Lesson_Validation
 ------------------------------------------------------------
-CREATE TABLE public.Lesson_Validation(
-	ID_Lesson       INT  NOT NULL ,
-	ID_User         UUID NOT NULL ,
-	Validate_Date   DATE  NOT NULL ,
-	IsCompleted     BOOL NOT NULL DEFAULT FALSE,
-	CONSTRAINT Lesson_Validation_PK PRIMARY KEY (ID_Lesson,ID_User)
+CREATE TABLE public.LessonValidation(
+	lessonId       INT  NOT NULL ,
+	userUuid       VARCHAR (36) NOT NULL ,
+	validateDate   DATE  NOT NULL ,
+	isCompleted    BOOL NOT NULL DEFAULT FALSE,
+	CONSTRAINT LessonValidation_PK PRIMARY KEY (lessonId,userUuid)
 
-	,CONSTRAINT Lesson_Validation_Lesson_FK FOREIGN KEY (ID_Lesson) REFERENCES public.Lesson(ID_Lesson)
-	,CONSTRAINT Lesson_Validation_User0_FK FOREIGN KEY (ID_User) REFERENCES public.User(ID_User)
+	,CONSTRAINT LessonValidation_Lessons_FK FOREIGN KEY (lessonId) REFERENCES public.Lessons(lessonId)
+	,CONSTRAINT LessonValidation_Users0_FK FOREIGN KEY (userUuid) REFERENCES public.Users(userUuid)
 );
-
 
 ------------------------------------------------------------
 -- Table: Publication_Status_Attribution
 ------------------------------------------------------------
-CREATE TABLE public.Publication_Status_Attribution(
-	ID_Formation            INT  NOT NULL ,
-	ID_Module               INT  NOT NULL ,
-	ID_Lesson               INT  NOT NULL ,
-	ID_Publication_Status   INT  NOT NULL ,
-	CONSTRAINT Publication_Status_Attribution_PK PRIMARY KEY (ID_Formation,ID_Module,ID_Lesson,ID_Publication_Status)
+CREATE TABLE public.PublicationStatusAttribution(
+	formationId           INT  NOT NULL ,
+	moduleId              INT  NOT NULL ,
+	lessonId              INT  NOT NULL ,
+	publicationStatusId   INT  NOT NULL  ,
+	CONSTRAINT PublicationStatusAttribution_PK PRIMARY KEY (formationId,moduleId,lessonId,publicationStatusId)
 
-	,CONSTRAINT Publication_Status_Attribution_Formation_FK FOREIGN KEY (ID_Formation) REFERENCES public.Formation(ID_Formation)
-	,CONSTRAINT Publication_Status_Attribution_Module0_FK FOREIGN KEY (ID_Module) REFERENCES public.Module(ID_Module)
-	,CONSTRAINT Publication_Status_Attribution_Lesson1_FK FOREIGN KEY (ID_Lesson) REFERENCES public.Lesson(ID_Lesson)
-	,CONSTRAINT Publication_Status_Attribution_Publication_Status2_FK FOREIGN KEY (ID_Publication_Status) REFERENCES public.Publication_Status(ID_Publication_Status)
+	,CONSTRAINT PublicationStatusAttribution_Formations_FK FOREIGN KEY (formationId) REFERENCES public.Formations(formationId)
+	,CONSTRAINT PublicationStatusAttribution_Modules0_FK FOREIGN KEY (moduleId) REFERENCES public.Modules(moduleId)
+	,CONSTRAINT PublicationStatusAttribution_Lessons1_FK FOREIGN KEY (lessonId) REFERENCES public.Lessons(lessonId)
+	,CONSTRAINT PublicationStatusAttribution_PublicationStatus2_FK FOREIGN KEY (publicationStatusId) REFERENCES public.PublicationStatus(publicationStatusId)
 );
-
 
 ------------------------------------------------------------
 -- Table: Formation_Tag
 ------------------------------------------------------------
-CREATE TABLE public.Formation_Tag(
-	ID_Title_Tag   INT  NOT NULL ,
-	ID_Formation   INT  NOT NULL ,
-	CONSTRAINT Formation_Tag_PK PRIMARY KEY (ID_Title_Tag,ID_Formation)
+CREATE TABLE public.FormationTag(
+	titleTagId    INT  NOT NULL ,
+	formationId   INT  NOT NULL  ,
+	CONSTRAINT FormationTag_PK PRIMARY KEY (titleTagId,formationId)
 
-	,CONSTRAINT Formation_Tag_Tag_FK FOREIGN KEY (ID_Title_Tag) REFERENCES public.Tag(ID_Title_Tag)
-	,CONSTRAINT Formation_Tag_Formation0_FK FOREIGN KEY (ID_Formation) REFERENCES public.Formation(ID_Formation)
+	,CONSTRAINT FormationTag_Tags_FK FOREIGN KEY (titleTagId) REFERENCES public.Tags(titleTagId)
+	,CONSTRAINT FormationTag_Formations0_FK FOREIGN KEY (formationId) REFERENCES public.Formations(formationId)
 );
-
 ```
 
 [🔝 Retour à la Table des matières](../../README.md#table-des-matieres)
