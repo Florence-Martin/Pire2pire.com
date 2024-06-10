@@ -39,7 +39,7 @@
   - un administrateur peut ajouter, modifier et désactiver un module
   - un administrateur est responsable de l'approbation des changements de statut d'un module de "brouillon" à "publié" ou "archivé"
   - un administrateur peut ajouter, modifier et désactiver une leçon
-  - un administrateur peut ajouter, modifier ou supprimer un ou plusieurs tags d'une leçon
+  - un administrateur peut ajouter, modifier ou supprimer un ou plusieurs tags d'une formation
 - **Super-administrateur**
   - un super-administrateur peut ajouter, modifier et désactiver un compte administrateur
 
