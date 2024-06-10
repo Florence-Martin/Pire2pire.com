@@ -14,9 +14,10 @@ Ce processus est mené en collaboration étroite avec le client pour garantir qu
 5. [MCD (Modèle Conceptuel des Données)](./doc/Merise/MCD.md)
 6. [MLD (Modèle Logique des Données)](./doc/Merise/MLD.md)
 7. [Script SQL](./doc/Merise/SQL.md)
-8. [Instructions d'installation](#instructions-dinstallation)
-9. [Contribution](#contribution)
-10. [Conclusion](./doc/Conclusion.md)
+8. [UML-Use Case](./doc/UML/UseCase.md)
+9. [Instructions d'installation](#instructions-dinstallation)
+10. [Contribution](#contribution)
+11. [Conclusion](./doc/Conclusion.md)
 
 ## Instructions d'installation
 
