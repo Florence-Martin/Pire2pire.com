@@ -6,7 +6,7 @@ Ce diagramme illustre l’emploi du protocole d’autorisation **OAuth** pour re
 
 <details>
 <summary>Version textualisée de ce diagramme</summary>
-  
+
 ### Participants
 - **Utilisateur** : La personne qui souhaite accéder à l'application.
 - **Navigateur Web** : Le programme utilisé par l'utilisateur pour interagir avec l'application.
@@ -44,4 +44,4 @@ Ce diagramme illustre l’emploi du protocole d’autorisation **OAuth** pour re
     - 20. **Affichage de la ressource non disponible** : Le navigateur affiche un message indiquant que la ressource n'est pas accessible.
 
 21. **Fin du processus** : Le processus se termine, que l'utilisateur ait ou non obtenu l'accès.
-    </details>
+</details>
