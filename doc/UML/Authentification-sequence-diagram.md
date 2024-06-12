@@ -8,6 +8,7 @@ Ce diagramme illustre l’emploi du protocole d’autorisation **OAuth** pour re
 <summary>Version textualisée de ce diagramme</summary>
 
 ### Participants
+
 - **Utilisateur** : La personne qui souhaite accéder à l'application.
 - **Navigateur Web** : Le programme utilisé par l'utilisateur pour interagir avec l'application.
 - **Application** : Le logiciel que l'utilisateur cherche à utiliser.
@@ -28,20 +29,24 @@ Ce diagramme illustre l’emploi du protocole d’autorisation **OAuth** pour re
 ### Gestion des Alternatives
 
 - **Traitement de la permission** :
+
   - **Si l'accord est donné, le processus continue**
-    - 9. **Traitement de la permission** : Le serveur traite l'accord donné par l'utilisateur.
-    - 10. **Redirection sécurisée** : Le navigateur est redirigé vers l'application avec un code spécial d'autorisation.
-    - 11. **Code d'autorisation de l'application** : L'application reçoit ce code.
-    - 12. **Envoi du code d'autorisation au serveur** : L'application envoie ce code au serveur d'autorisation.
-    - 13. **Jeton d'accès** : Le serveur envoie un jeton qui permet d'accéder aux informations protégées.
-    - 14. **Accès aux informations protégées** : L'application utilise ce jeton pour demander l'accès aux informations protégées stockées sur le serveur de contenu.
-    - 15. **Ressources protégées de l'utilisateur** : Le serveur de contenu envoie les informations protégées à l'application.
-    - 16. **Livraison des informations protégées** : Les informations sont fournies à l'utilisateur.
-    - 17. **Ressources de l'utilisateur protégées et délivrées** : Les ressources protégées sont finalement rendues accessibles à l'utilisateur.
+
+    9. **Traitement de la permission** : Le serveur traite l'accord donné par l'utilisateur.
+    10. **Redirection sécurisée** : Le navigateur est redirigé vers l'application avec un code spécial d'autorisation.
+    11. **Code d'autorisation de l'application** : L'application reçoit ce code.
+    12. **Envoi du code d'autorisation au serveur** : L'application envoie ce code au serveur d'autorisation.
+    13. **Jeton d'accès** : Le serveur envoie un jeton qui permet d'accéder aux informations protégées.
+    14. **Accès aux informations protégées** : L'application utilise ce jeton pour demander l'accès aux informations protégées stockées sur le serveur de contenu.
+    15. **Ressources protégées de l'utilisateur** : Le serveur de contenu envoie les informations protégées à l'application.
+    16. **Livraison des informations protégées** : Les informations sont fournies à l'utilisateur.
+    17. **Ressources de l'utilisateur protégées et délivrées** : Les ressources protégées sont finalement rendues accessibles à l'utilisateur.
+
   - **Si l'accord n'est pas donné, le processus échoue** :
-    - 18. **Aucune permission accordée** : L'accès n'est pas autorisé.
-    - 19. **Ressource non disponible** : L'application indique que la ressource demandée n'est pas accessible.
-    - 20. **Affichage de la ressource non disponible** : Le navigateur affiche un message indiquant que la ressource n'est pas accessible.
+
+    18. **Aucune permission accordée** : L'accès n'est pas autorisé.
+    19. **Ressource non disponible** : L'application indique que la ressource demandée n'est pas accessible.
+    20. **Affichage de la ressource non disponible** : Le navigateur affiche un message indiquant que la ressource n'est pas accessible.
 
 21. **Fin du processus** : Le processus se termine, que l'utilisateur ait ou non obtenu l'accès.
 </details>
