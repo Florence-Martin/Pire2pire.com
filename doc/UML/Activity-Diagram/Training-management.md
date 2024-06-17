@@ -60,3 +60,5 @@ Ce diagramme décrit les interactions entre un instructeur potentiel et l’admi
   - • L’administrateur peut voir son tableau de bord pour suivre l’état des formations et des instructeurs.
 
 </details>
+
+[🔝 Retour à la Table des matières](../../../README.md#table-des-matieres)

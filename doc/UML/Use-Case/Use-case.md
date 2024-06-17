@@ -4,3 +4,5 @@ Un **Use Case** (ou cas d’utilisation) est une description détaillée d’une
 Cette documentation est essentielle pour assurer la compréhension mutuelle entre les parties prenantes et l’équipe de développement.
 
 ![Représentation UML-UseCase](../../Assets/Images/Use-case.png)
+
+[🔝 Retour à la Table des matières](../../../README.md#table-des-matieres)
