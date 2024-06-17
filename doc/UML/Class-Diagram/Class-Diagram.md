@@ -60,3 +60,5 @@ Ce diagramme décrire le système de gestion de formations en ligne, où les uti
 - ContentStatus : Statuts de contenu (Publié, Brouillon, Archivé).
 
   </details>
+
+[🔝 Retour à la Table des matières](../../../README.md#table-des-matieres)

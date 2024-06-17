@@ -14,12 +14,15 @@ Ce processus est mené en collaboration étroite avec le client pour garantir qu
 5. [MCD (Modèle Conceptuel des Données)](./doc/Merise/MCD.md)
 6. [MLD (Modèle Logique des Données)](./doc/Merise/MLD.md)
 7. [Script SQL](./doc/Merise/SQL.md)
-8. [UML-Use Case](./doc/UML/Use-case.md)
-9. [UML-Diagramme de séquence - inscription à une formation](./doc/UML/Registration-sequence-diagram.md)
-10. [UML-Diagramme de séquence - authentification](./doc/UML/UserAuthentification-sequence-diagram.md)
-11. [Instructions d'installation](#instructions-dinstallation)
-12. [Contribution](#contribution)
-13. [Conclusion](./doc/Conclusion.md)
+8. [UML-Use Case](./doc/UML/Use-Case/Use-case.md)
+9. [UML-Diagramme d'activité - inscription à une formation](./doc/UML/Activity-Diagram/Course-registration.md)
+10. [UML-Diagramme d'activité - gestion des formations](./doc/UML/Activity-Diagram/Training-management.md)
+11. [UML-Diagramme de classe - inscription à une formation](./doc/UML/Class-Diagram/Class-Diagram.md)
+12. [UML-Diagramme de séquence - inscription à une formation](./doc/UML/Sequence-Diagram/Registration-sequence-diagram.md)
+13. [UML-Diagramme de séquence - authentification](./doc/UML/Sequence-Diagram/UserAuthentification-sequence-diagram.md)
+14. [Instructions d'installation](#instructions-dinstallation)
+15. [Contribution](#contribution)
+16. [Conclusion](./doc/Conclusion.md)
 
 ## Instructions d'installation
 

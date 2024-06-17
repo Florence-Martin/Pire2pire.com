@@ -67,3 +67,5 @@ Ce diagramme illustre l’emploi du protocole d’autorisation **OAuth** pour re
   - • Le navigateur web informe l’utilisateur que les ressources de l’application ne sont pas disponibles.
   - • Alt [no permission]: Si la permission n’est pas accordée, l’utilisateur est informé que les ressources de l’application ne sont pas disponibles.
   </details>
+
+[🔝 Retour à la Table des matières](../../../README.md#table-des-matieres)

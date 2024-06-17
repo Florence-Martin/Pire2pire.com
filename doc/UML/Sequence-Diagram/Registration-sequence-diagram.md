@@ -73,3 +73,5 @@ Ce diagramme décrit les interactions détaillées entre l’utilisateur, l’in
 	- •	Action: refuse registration by message
 	- •	L’interface web informe l’utilisateur que l’inscription a été refusée par message.
 </details>
+
+[🔝 Retour à la Table des matières](../../../README.md#table-des-matieres)

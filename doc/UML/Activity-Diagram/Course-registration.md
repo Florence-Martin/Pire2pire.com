@@ -9,3 +9,5 @@ Il intègre également des fonctionnalités administratives pour une gestion ét
 <summary>Version textualisée de ce diagramme</summary>
 
 </details>
+
+[🔝 Retour à la Table des matières](../../../README.md#table-des-matieres)
