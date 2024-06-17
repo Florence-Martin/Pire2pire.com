@@ -7,22 +7,53 @@ Ce processus est mené en collaboration étroite avec le client pour garantir qu
 
 ## [Table des matières](#table-des-matieres)
 
-1. [Introduction](./doc/Client/Context.md)
-2. [Méthode MERISE](./doc/Merise/Merise-acronym.md)
-3. [Dictionnaire de données](./doc/Dictionary.md)
-4. [Règles de gestion](./doc/Gestion-rules.md)
-5. [MCD (Modèle Conceptuel des Données)](./doc/Merise/MCD.md)
-6. [MLD (Modèle Logique des Données)](./doc/Merise/MLD.md)
-7. [Script SQL](./doc/Merise/SQL.md)
-8. [UML-Use Case](./doc/UML/Use-Case/Use-case.md)
-9. [UML-Diagramme d'activité - inscription à une formation](./doc/UML/Activity-Diagram/Course-registration.md)
-10. [UML-Diagramme d'activité - gestion des formations](./doc/UML/Activity-Diagram/Training-management.md)
-11. [UML-Diagramme de classe - inscription à une formation](./doc/UML/Class-Diagram/Class-Diagram.md)
-12. [UML-Diagramme de séquence - inscription à une formation](./doc/UML/Sequence-Diagram/Registration-sequence-diagram.md)
-13. [UML-Diagramme de séquence - authentification](./doc/UML/Sequence-Diagram/UserAuthentification-sequence-diagram.md)
-14. [Instructions d'installation](#instructions-dinstallation)
-15. [Contribution](#contribution)
-16. [Conclusion](./doc/Conclusion.md)
+### 1. Introduction et Contexte
+
+#### [1.1 Introduction](./doc/Client/Context.md)
+
+#### [1.2 Acronyme MERISE](./doc/Merise/Merise-acronym.md)
+
+#### [1.3 Dictionnaire de données](./doc/Dictionary.md)
+
+#### [1.4 Règles de gestion](./doc/Gestion-rules.md)
+
+### 2. Modélisation des Données avec Merise
+
+#### [2.1 MCD (Modèle Conceptuel des Données)](./doc/Merise/MCD.md)
+
+#### [2.2 MLD (Modèle Logique des Données)](./doc/Merise/MLD.md)
+
+#### [2.3 Script SQL](./doc/Merise/SQL.md)
+
+### 3. Modélisation UML
+
+#### [3.1 UML-Use Case](./doc/UML/Use-Case/Use-case.md)
+
+#### [3.2 UML-Diagramme d'activité - inscription à une formation](./doc/UML/Activity-Diagram/Course-registration.md)
+
+#### [3.3 UML-Diagramme d'activité - gestion des formations](./doc/UML/Activity-Diagram/Training-management.md)
+
+#### [3.4 UML-Diagramme de classe - inscription à une formation](./doc/UML/Class-Diagram/Class-Diagram.md)
+
+#### [3.5 UML-Diagramme de séquence - inscription à une formation](./doc/UML/Sequence-Diagram/Registration-sequence-diagram.md)
+
+#### [3.6 UML-Diagramme de séquence - authentification](./doc/UML/Sequence-Diagram/UserAuthentification-sequence-diagram.md)
+
+### 4. Installation et Contribution
+
+#### [4.1 Instructions d'installation](#instructions-dinstallation)
+
+#### [4.2 Contribution](#contribution)
+
+### 5. Conclusion
+
+#### [5.1 Conclusion](./doc/Conclusion.md)
+
+---
+
+---
+
+---
 
 ## Instructions d'installation
 
