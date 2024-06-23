@@ -1,6 +1,6 @@
 # Pire2pire.com
 
-La conception de la base de données pour la plateforme de formation en ligne **pire2pire.com** est réalisée en utilisant la méthode MERISE et les diagrammes UML (Unified Modeling Language).  
+La conception de la base de données pour la plateforme de formation en ligne **pire2pire.com** est réalisée en utilisant la méthode MERISE, tandis que la modélisation des processus et des interactions système est effectuée avec les diagrammes UML (Unified Modeling Language).  
 Ce processus est mené en collaboration étroite avec le client pour garantir que chaque étape de la conception soit validée conjointement par nos équipes et notre client.
 
 # Structure du dépôt
