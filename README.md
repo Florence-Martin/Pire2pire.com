@@ -1,6 +1,6 @@
 # Pire2pire.com
 
-La conception de la base de données pour la plateforme de formation en ligne **pire2pire.com** est réalisée en utilisant la méthode MERISE.  
+La conception de la base de données pour la plateforme de formation en ligne **pire2pire.com** est réalisée en utilisant la méthode MERISE et les diagrammes UML (Unified Modeling Language).  
 Ce processus est mené en collaboration étroite avec le client pour garantir que chaque étape de la conception soit validée conjointement par nos équipes et notre client.
 
 # Structure du dépôt
@@ -33,11 +33,11 @@ Ce processus est mené en collaboration étroite avec le client pour garantir qu
 
 #### [3.3 UML-Diagramme d'activité - gestion des formations](./doc/UML/Activity-Diagram/Training-management.md)
 
-#### [3.4 UML-Diagramme de classe - inscription à une formation](./doc/UML/Class-Diagram/Class-Diagram.md)
+#### [3.4 UML-Diagramme de séquence - inscription à une formation](./doc/UML/Sequence-Diagram/Registration-sequence-diagram.md)
 
-#### [3.5 UML-Diagramme de séquence - inscription à une formation](./doc/UML/Sequence-Diagram/Registration-sequence-diagram.md)
+#### [3.5 UML-Diagramme de séquence - authentification](./doc/UML/Sequence-Diagram/UserAuthentification-sequence-diagram.md)
 
-#### [3.6 UML-Diagramme de séquence - authentification](./doc/UML/Sequence-Diagram/UserAuthentification-sequence-diagram.md)
+#### [3.6 UML-Diagramme de classe - inscription à une formation](./doc/UML/Class-Diagram/Class-Diagram.md)
 
 ### 4. Installation et Contribution
 
