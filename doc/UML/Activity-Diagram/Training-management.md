@@ -4,9 +4,4 @@ Ce diagramme décrit un flux de travail interactif entre le formateur et l’adm
 
 ![Représentation UML-Diagramme d'activité - gestion des formations](../../Assets/Images/training%20management.png)
 
-<details>
-<summary>Version textualisée de ce diagramme</summary>
-
-</details>
-
 [🔝 Retour à la Table des matières](../../../README.md#table-des-matieres)
