@@ -31,13 +31,13 @@ Ce processus est mené en collaboration étroite avec le client pour garantir qu
 
 #### [3.2 Diagramme d'activité - inscription à une formation](./doc/UML/Activity-Diagram/Course-registration.md)
 
-#### [3.3 Diagramme d'activité - gestion des formations](./doc/UML/Activity-Diagram/Training-management.md)
+#### [3.3 Diagramme d'activité - validation d'une formation](./doc/UML/Activity-Diagram/Validation-training-course.md)
 
 #### [3.4 Diagramme de séquence - inscription à une formation](./doc/UML/Sequence-Diagram/Registration-sequence-diagram.md)
 
 #### [3.5 Diagramme de séquence - authentification](./doc/UML/Sequence-Diagram/UserAuthentification-sequence-diagram.md)
 
-#### [3.6 Diagramme de classe - inscription à une formation](./doc/UML/Class-Diagram/Class-Diagram.md)
+#### [3.6 Diagramme de classe](./doc/UML/Class-Diagram/Class-Diagram.md)
 
 ### 4. Installation et Contribution
 
